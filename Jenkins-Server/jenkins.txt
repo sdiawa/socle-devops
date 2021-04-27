@@ -1,0 +1,33 @@
+Connexion SSh
+  sudo apt update
+  sudo apt install openssh-server
+  systemctl start ssh
+  systemctl status ssh
+  ifconfig
+______________________________________________________________________________
+Prerequis pour jenkis
+      sudo apt install openjdk-11-jdk 
+      sudo apt install git
+      sudo apt install curl
+      curl -fsSL https://get.docker.com -o get-docker.sh
+      sh get-docker.sh
+      sudo usermod -aG docker dskjenkis
+      sudo curl -L "https://github.com/docker/compose/releases/download/1.28.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+      sudo chmod +x /usr/local/bin/docker-compose
+      docker images
+      logout
+_______________________________________________________________________________
+   mkdir jenkis
+   cd jenkis/  
+   git clone https://github.com/eazytrainingfr/jenkins-training.git
+   cd jenkins-training/
+   docker-compose up -d
+   docker ps
+   docker exec jenkins-training_jenkins_1 cat /var/jenkins_home/secrets/initialAdminPassword
+____________________________________________________________
+se connecter via navigateur avec adresse du serveur sur le port :8080
+___________________________________________________________________________________
+parametrage :
+
+build:  creez un job qui q'appellera build
+- https://github.com/heroku/alpinehelloworld
