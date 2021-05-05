@@ -1,0 +1,30 @@
+les prequis:
+
+Jenkins-server 
+Installer Maven dans Jenkins
+1) https://maven.apache.org/download.cgi
+
+ # creer dossier maven dans /opt
+  mkdir /opt/maven
+  cd /opt/maven
+  # downloading maven version 3.8.1
+  wget https://mirrors.ircam.fr/pub/apache/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.zip
+  unzip /opt/maven/apache-maven-3.8.1-bin.zip
+
+2) environement 
+ cd /root/
+ nano ~/.bash_profile
+
+JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.292.b10-0.el8_3.x86_64
+  M2_HOME=/opt/maven/apache-maven-3.8.1
+  M2=$M2_HOME/bin
+
+PATH=$PATH:$JAVA_HOME:$M2_HOME:$M2:$HOME/bin
+
+
+export PATH
+
+
+source ~/.bash_profile
+
+

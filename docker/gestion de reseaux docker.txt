@@ -1,0 +1,40 @@
+# creation de reseau type bridge
+
+ docker network create --driver=bridge --subnet=192.168.2.0/24 sharenetwork
+# affichage des reseaux disponible 
+docker network ls
+
+# affichage des images disponible
+docker image ls
+
+#demarrer une image ubuntu avec le reseau creer et en surchargeant cmd avec la commande /bin/bash
+
+docker run -it --name ubuntu1 --network sharenetwork -d ubuntu /bin/bash
+
+#pour avoir lers informations detaillé de votre container
+docker inspect ubuntu1
+
+# pour me connecter a mon container 
+docker exec -it ubuntu1 /bin/bash
+# pour connaitre son adresse ip
+ cat /etc/hosts
+#pour ping on install dans la machine
+ apt-get update && apt-get install iputils-ping
+ ping ubuntu2
+
+#
+#
+#
+#
+#MONTER UN SITE INTERNET SUR UN CONTENAIRE A LA BASE D'APACHE
+docker run -it --name webserver -p 80:80 -d -v ${PWD}/website-exple:/usr/local/apache2/htdocs/ httpd
+
+#
+#
+#
+#
+#
+#
+#
+#
+##################

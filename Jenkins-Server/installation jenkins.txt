@@ -1,9 +1,9 @@
 
     1  ls
-    2  yum install java* nano
+    2  yum install java* nano git wget unzip
     3  find /usr/lib/jvm/java-1.8* | head -n 3
     4  java -version
-    5  nano .bash_profile
+    5  nano ~/.bash_profile
   -- ajouter environement de travailler
 # .bash_profile
 
@@ -27,5 +27,7 @@ export PATH
    13  yum install jenkins
    14  systemctl start jenkins
    15  systemctl enable jenkins
+   16  cat /var/lib/jenkins/secrets/initialAdminPassword
+
  
 
