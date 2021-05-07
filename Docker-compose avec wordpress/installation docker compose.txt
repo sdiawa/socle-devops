@@ -1,0 +1,25 @@
+###########################################
+installation docker compose
+#########################################
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker compose -v
+
+###########################################
+utilisation de docker compose
+###########################################
+
+##on cree un fichier docker-compose.yml
+"## dans ce fichier vous mettez les information de votre applic
+ #pour executer:
+    
+docker-compose up -d
+  
+# pour voir mais contenaires
+docker-compose ps
+##pour les loggs
+docker-compose logs
+"#
+"##
+"#"
+##
